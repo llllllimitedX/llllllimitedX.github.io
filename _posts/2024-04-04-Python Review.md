@@ -137,7 +137,7 @@ max(['c++','java','python'])	# 'python'
 
 * **列表解析（List Comprehension）**：通过对已有元素序列依次进行操作来创建一个新列表
 
-<img src="https://github.com/llllllimitedX/tmpdatas/blob/main/img24/image-20230621155346200.png" alt="image-20230621155346200" style="zoom:50%;" />
+![](https://github.com/llllllimitedX/tmpdatas/blob/main/img24/image-20230621155346200.png?raw=true)
 
 列表解析非常通用，可以有多个for语句（从左到右依次执行），也可以有复杂的条件判断表达式，还可以进行列表解析的嵌套，下面通过几个实例来说明：
 
@@ -180,7 +180,7 @@ list(zip(*matrix))									# [[1,5,9],[2,6,10],[3,7,11],[4,8,12]]
 
 * **列表切片（Slice）**：按照下标从列表中取出多个元素，构成新的列表。
 
-<img src="https://github.com/llllllimitedX/tmpdatas/blob/main/img24/image-20230621161410805.png" alt="image-20230621161410805" style="zoom:50%;" />
+![](https://github.com/llllllimitedX/tmpdatas/blob/main/img24/image-20230621161410805.png?raw=true)
 
 注意：**结束位置元素不在结果列表中**！start、end 可以省略，分别表示从列表开始、直到列表结束；步长用于跳过部分元素，可以省略，表示默认步长为1；切片结果由start、end和step共同决定，若所选区域内无元素，则返回空列表。
 
@@ -328,7 +328,7 @@ sd3 = { chr(ord('a')+i): i+1 for i in range(5) }	# {'a': 1, 'b': 2, 'c': 3, 'd':
 sd4 = { k:v*2 for (k,v) in sd3.items() }			# {'a': 2, 'b': 4, 'c': 6, 'd': 8, 'e': 10}
 ```
 
-<img src="https://github.com/llllllimitedX/tmpdatas/blob/main/img24/image-20230621171209431.png" alt="image-20230621171209431" style="zoom:50%;" />
+![](https://github.com/llllllimitedX/tmpdatas/blob/main/img24/image-20230621171209431.png?raw=true)
 
 * **从字典中获取元素信息**：可转换成元素序列（iterable），用于循环遍历等用途（注意：**由于用于索引value，所以keys中的值不能重复**）
 
@@ -633,8 +633,7 @@ def golden_ratio():
 golden_ratio()
 ```
 
-<img src="https://github.com/llllllimitedX/tmpdatas/blob/main/img24/image-20230320172836245.png" alt="image-20230320172835174" style="zoom: 33%;" />
-
+![](https://github.com/llllllimitedX/tmpdatas/blob/main/img24/image-20230320172836245.png?raw=true)
 ```python
 # 实例2：用嵌套函数修改之前的求2的平方根（运行的底层逻辑如下图所示）
 def improve(update, accurate, guess):
@@ -656,8 +655,7 @@ def my_sqrt(x):
 my_sqrt(2)
 ```
 
-<img src="https://github.com/llllllimitedX/tmpdatas/blob/main/img24/image-20230320175030283.png" alt="image-20230320175030283" style="zoom: 33%;" />
-
+![](https://github.com/llllllimitedX/tmpdatas/blob/main/img24/image-20230320175030283.png?raw=true)
 * 在嵌套定义的函数中，如果在函数中需要修改环境中的值（绑定关系），亦需要**显示声明需要修改的绑定关系**，此时的代码是`nonlocal x`，使得当前frame中不再创建x的绑定关系，而是使用parent frame（global除外）中的绑定关系。（注意：函数运行过程中**可以改变parent frame中的状态**，这也是一种函数的副作用）
 * 函数作为返回值可以使得程序具有更大的灵活性，对nonlocal的使用使得函数具有外部状态，如下面的实例中，每次调用make_withdraw函数都会创造一个包含balance变量的frame，后续的withdraw调用将会使用这个frame中的balance状态（称作**闭包**）：
 
@@ -675,7 +673,7 @@ def make_withdraw(balance):
     return withdraw
 ```
 
-<img src="https://github.com/llllllimitedX/tmpdatas/blob/main/img24/image-20230621205344889.png" alt="image-20230621205344889" style="zoom:60%;" />
+![](https://github.com/llllllimitedX/tmpdatas/blob/main/img24/image-20230621205344889.png?raw=true)
 
 * **总结一下**：Non-pure functions具有可以改变的状态和环境，可以通过mutable参数或显式声明修改**全局状态**（global frame，即C++中的全局变量）和**外层函数的状态**（parent frame，即C++中的静态变量）。因而同样的函数代码，在不同的状态下可能执行不同的功能，同样的函数的多次调用也可能返回不同的结果，这使得程序状态和正确性的维护变得复杂。
 
@@ -899,7 +897,7 @@ print(b.interest)					# 0.4
 print(Account.interest)				# 0.4
 ```
 
-<img src="C:\Users\kaka\AppData\Roaming\Typora\typora-user-images\image-20230621224131477.png" alt="image-20230621224131477" style="zoom:40%;" />
+![](https://github.com/llllllimitedX/tmpdatas/blob/main/img24/image-20230621224131477.png?raw=true)
 
 * **成员访问**（dot expression）：`<expr>.<name>` 是成员访问的一般语法，其中expr的计算结果是一个对象，name是一个可能的绑定关系。**成员访问是访问结果对象的指定成员。**如果赋值操作符在左边，直接对`<expr>`结果的成员进行查找：若结果为对象，则绑定对象成员；若结果为类，则绑定类成员。如果操作符在右边，计算`<expr>`的结果对象，再**依次**查找绑定关系：在对象的实例成员列表中查找`<name>`的绑定关系，在对象的类成员列表中查找`<name>`的绑定关系。则可以**利用类成员进行类级别的操作**，如：
 
