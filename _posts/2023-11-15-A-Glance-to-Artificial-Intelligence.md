@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 窥探人工智能
-subtitle: 不断发展的现代方法
+title: 窥探人工智能——一种不断发展的现代方法
+subtitle: 我们仍然有很多事情要做
 date: 2023-11-15
 categories: test
 tags: essays 
@@ -31,9 +31,10 @@ tags: essays
 
 推理期的早期研究聚焦于开发能够执行逻辑推理的算法和程序，以进行可以良定义的问题求解。由于计算机进行计算的通用性强、判断能力强，对于一些基本的规则输入，应用启发式的推理手段，其可以进行一些较为复杂问题的求解。例如著名的着色问题(Map-coloring problem)，其作为一种约束满足问题(CSP)，输入一些简单的规则和约束(例如：每个区域必须被着色，相邻的区域颜色不能相同)，应用一些推理规则，例如回溯搜索(Backtracking Search)，即可找到合适的颜色分配方案，来满足所有约束条件。如图1所示，通过逻辑规则和符号推理，计算机可以逐步尝试不同的颜色分配方案，同时检查每个步骤是否符合约束条件。这种方式允许计算机在不断尝试中逐步逼近解决方案，直到找到满足所有约束的合法着色方案。因而，应用推理规则之后，计算机也逐渐能够拥有“人的智能”，这是人工智能在第一阶段——推理期的典型表现。
 
-![](https://github.com/llllllimitedX/tmpdatas/blob/main/img24/essay101?raw=true)
+![](https://github.com/llllllimitedX/tmpdatas/blob/main/img24/essay101.png?raw=true)
 
 <center>fig1: Part of the search tree for the map-coloring problem</center>
+
 
 这一阶段的典型研究如逻辑定理证明系统，其中代表性的成果是1955年Herbert Gelernter的Geometry定理证明程序。此外，早期的专家系统也是推理期的重要成果，例如Dendral系统用于有机化学分析，以及MYCIN系统用于诊断和治疗感染性疾病。然而，随着研究的深入，某些问题可能超出了已知规则或逻辑系统的范畴。推理面临的挑战在于处理不确定性、复杂性和模糊性，有时某些问题可能缺乏清晰的逻辑规则或难以用符号化的方式表达，这使得传统推理方法难以应对。另外，随着技术的不断进步和计算能力的提升，使得人工智能步入了新的发展阶段。
 
@@ -43,21 +44,7 @@ tags: essays
 
 人工智能的第二个发展阶段是知识期(knowledge Engineering)。从推理期到知识期发展的跃进是一种必然的趋势，正如人类思考问题的方式有演绎(deduction)和归纳(induction)，推理期的智能Agent主要进行演绎的任务，而知识期的Agent则开始进行知识的表示与归纳。研究者们提出了多种知识表示形式，如逻辑表达式、语义网络、框架表示法等。例如，基于逻辑的知识表示语言(如谓词逻辑)被广泛应用于表达形式化的规则和关系，而语义网络则用于以图形方式表示实体和它们之间的关联。
 
-例如，作为最基本的知识——命题逻辑中，智能Agent可以通过学习如
-
-$$
-(\alpha\Leftarrow\beta) \equiv (\neg\alpha \vee \beta)
-$$
-
-$$
-\neg(\alpha \vee \beta) \equiv (\neg \alpha \wedge \neg \beta)
-$$
-
-$$
-(\alpha\vee(\beta \wedge \gamma)) \equiv ((\alpha\vee\beta)\wedge(\alpha\vee\gamma))
-$$
-
-等等的知识，即可进行基于归纳的推理过程(其简单思路是：通过以上的知识将命题逻辑的每个语句转换成合取范式(CNF)，并将其作为归纳过程的输入，进行语句的基本归纳)。
+例如，作为最基本的知识——命题逻辑中，智能Agent可以通过学习如 $(\alpha\Leftarrow\beta) \equiv (\neg\alpha \vee \beta)$ 、$\neg(\alpha \vee \beta) \equiv (\neg \alpha \wedge \neg \beta)$ 、$(\alpha\vee(\beta \wedge \gamma)) \equiv ((\alpha\vee\beta)\wedge(\alpha\vee\gamma))$ 等等的知识，即可进行基于归纳的推理过程(其简单思路是：通过以上的知识将命题逻辑的每个语句转换成合取范式(CNF)，并将其作为归纳过程的输入，进行语句的基本归纳)。
 
 另一个重要的方向是专家系统的发展，专家系统结合了知识表示和推理技术，旨在模拟领域专家的知识和决策过程。这些系统利用存储在知识库中的专业领域知识，通过推理引擎进行逻辑推断和问题求解，从而提供对特定领域问题的解决方案。
 
@@ -77,9 +64,10 @@ $$
 
 这些一个个模型的提出，丰富了数据驱动的方法，通过大量数据的训练和模型的优化，使得计算机系统能够逐步提高性能，从而实现自主学习和适应。这使得人工智能系统能够更好地处理复杂、不确定、动态的环境，并在特定任务上取得超越人类的表现。图2展现了通过K均值(K-means)方法对无标签进行聚类任务的无监督学习过程。从中可以看出，这个阶段的发展标志着人工智能的一个重要转折，将重点从逻辑推理和知识表示转移到了数据驱动的方法上。
 
-![](https://github.com/llllllimitedX/tmpdatas/blob/main/img24/essay102?raw=true)
+![](https://github.com/llllllimitedX/tmpdatas/blob/main/img24/essay102.png?raw=true)
 
 <center>fig2: A two-dimensional t-SNE map of the MNIST data set, a collection of 60,000 images of handwritten digits, each 28×28 pixels and thus 784 dimensions.</center>
+
 
 #### 3-3 纵观：从推理期，到知识期，再到学习期
 
@@ -102,9 +90,10 @@ $$
 以计算机视觉领域为例，DNN的一个分支是卷积神经网络(Convolutional NN, CNN)，通过对图像进行层层卷积、池化、ReLU变换等操作，既可以在浅层提取出图像的一些初步特征(如边缘、轮廓等)，还可以在深层提取出图像的一些高维度特征(如面部表情、人物动作等)，因此对于计算机视觉中的三大问题：分类(Classification)、目标检测(Object Detection)、分割(Segmentation)都有着举足轻重的应用前景。如图3所示，展现了目标检测任务下CNN的架构，采用YOLO(You Only Look Once)算法。
 
 
-![](https://github.com/llllllimitedX/tmpdatas/blob/main/img24/essay103?raw=true)
+![](https://github.com/llllllimitedX/tmpdatas/blob/main/img24/essay103.png?raw=true)
 
 <center>fig3: The Architecture of CNN, with You Only Look Once detection task</center>
+
 
 #### 4-2 博弈的日趋成熟
 
@@ -139,17 +128,18 @@ OpenAI首席科学家I. Sutskeve最近在与英伟达CEO黄仁勋的访谈中，
 
 借用唯物辩证法的发展观，发展是事物由简单到复杂、由低级到高级的变化趋势，其实质是新事物的产生和旧事物的灭亡。人工智能从推理期、知识期，再到学习期，就是不断的推陈出新，从量变到质变的过程。其遵循人类智慧发展的客观规律，**从演绎到归纳，从局部到整体**，不断在曲折中迈进，在困难中突破。图4有趣地展现了人工智能发展的不同阶段人们对人工智能的态度变化：
 
-![](https://github.com/llllllimitedX/tmpdatas/blob/main/img24/essay104?raw=true)
+![](https://github.com/llllllimitedX/tmpdatas/blob/main/img24/essay104.png?raw=true)
 
 <center>fig4: Heuristic Development of Artificial Intelligence</center>
+
 
 人工智能的发展从最初的逻辑推理和演绎推理逐渐转向了对大规模数据的归纳学习。过去，智能Agent主要依赖于规则和逻辑来解决问题，而现在的人工智能则更加依赖于数据和模式识别，通过数据驱动的学习来取得成就。此外，AI for science的兴盛，例如AI破解蛋白质结构、AI药物设计、AI绘图等等各个领域的蓬勃发展，更是昭示着人工智能技术在解决现实世界问题中的应用的不断拓展，反映出其由专一向通用的发展趋势。
 
 神经网络的不断深入、博弈的日趋成熟、大模型的迅速崛起……这些无一不反映出人工智能当下“应用化”“通用化”的发展模式。作为一种发展不到70年的现代的方法，如此由推理、到知识、再到学习，逐渐融会贯通的发展方式。在听了周志华教授的讲座之后，笔者认为人工智能在未来将会以关联度更强、融合性更高的角度进行突破和发展，这亦是量变质变辩证统一的过程。最后，在本文中我们看到了人工智能在其短短的历史中已经取得了巨大进展，然而图灵(A.M. Turing)关于“计算机器与智能”的短文的最后一句话如今仍然言犹在耳：
 
-<center>**我们只能向前看到很短的距离，**</center>
+<center>我们只能向前看到很短的距离，</center>
 
-<center>**但是我们能够看到仍然有很多事情要做。**</center>
+<center>但是我们能够看到仍然有很多事情要做。</center>
 
 ### 参考资料
 
