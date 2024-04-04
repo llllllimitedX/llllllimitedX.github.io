@@ -1,5 +1,5 @@
 # Site settings 配置站点
-title: 'Xiang Li's Home Page'
+title: 'Xiang Lis Home Page'
 description: 'Welcome to my personal blog. Have fun!'
 keyword: 'Courses, Research, Personal, Blog, Xiang Li'
 url: '' # your host
@@ -24,7 +24,7 @@ footer:
   since: 2017
 
 # Author 配置博主信息
-author: 'Xiang Li 李想'
+author: 'Xiang Li'
 nickname: 'llllllimitedX'
 bio: 'Undergraduate Student at Kuang Yaming Honors School, Nanjing University, China'
 avatar: '/assets/img/profile.png'
