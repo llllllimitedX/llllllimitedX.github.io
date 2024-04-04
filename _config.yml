@@ -24,7 +24,7 @@ footer:
   since: 2024
 
 # Author 配置博主信息
-author: 'Xiang Li'
+author: '李想'
 nickname: 'idealee'
 bio: 'Undergraduate Student at Kuang Yaming Honors School, Nanjing University, China'
 avatar: '/assets/img/frog.jpg'
@@ -57,8 +57,8 @@ postPatterns: 'circuitBoard'
 # url: email, weibo, zhihu, twitter, instagram, juejin, github, douban, facebook, dribble, uicn, jianshu, medium, linkedin
 sns:
   email: 'e308655794@163.com'
-  zhihu: '308655794'
-  facebook: 'space.bilibili.com/32773300'
+  zhihu: '//juejin.im/user/57a6f434165abd006159b4cc'
+  facebook: '//space.bilibili.com/32773300'
   github: '//github.com/llllllimitedX'
 
 # Tags 设置标签
