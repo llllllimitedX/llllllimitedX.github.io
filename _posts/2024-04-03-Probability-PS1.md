@@ -6,6 +6,8 @@ categories: test
 tags: math courses 
 ---
 
+<font color = 'red'>**There seems something wrong with the mathematical formulas... I will fix them up later... But if you are eager to see it, I feel sorry that you have to make do with it.**</font>
+
 ## Problem 1
 
 ![](https://github.com/llllllimitedX/tmpdatas/blob/main/img24/prps101.png?raw=true)
