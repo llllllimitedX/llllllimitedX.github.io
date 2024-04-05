@@ -6,6 +6,8 @@ categories: test
 tags: programming courses 
 ---
 
+As you can see, this is my lecture note on AI programming course for it's final exam, when I was a freshmen in 2023. Just enjoy it! I add convenient quick indexes to help you locate what you want.
+
 ### Quick Indexes
 - [数据结构](#一python数据结构)
 	- [列表类型](#列表类型-list)
